@@ -31,4 +31,12 @@ public class PersonService {
     public Optional<Person> selectPersonById(UUID id) {
         return personDAO.selectPersonById(id);
     }
+
+    public int deletePerson(UUID id) {
+        return personDAO.deletePersonById(id);
+    }
+    public int updatePerson(UUID id, Person person) {
+        return personDAO.updatePersonById(id, person);
+    }
+
 }
